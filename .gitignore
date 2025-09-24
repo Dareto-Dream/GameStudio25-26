@@ -1,0 +1,105 @@
+# =============== #
+# Unity generated #
+# =============== #
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+MemoryCaptures/
+
+# =============== #
+# Asset Store     #
+# =============== #
+*.unitypackage
+
+# =============== #
+# User-specific   #
+# =============== #
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+
+# =============== #
+# Rider / VS Code #
+# =============== #
+.idea/
+.vscode/
+.vs/
+
+# =============== #
+# Other           #
+# =============== #
+.DS_Store
+*.apk
+*.aab
+*.keystore
+*.jks
+
+# Crash Reports
+sysinfo.txt
+
+# Auto-generated JetBrains Rider plugin file
+*.unityproj
+
+# Unity Collaborate
+.collab/
+
+# Unity Cloud Build
+*.cloud
+
+# Localization files (optional)
+*.pot
+*.po
+
+# Yarn Spinner / Linting cache
+yarn.lock
+*.lint
+
+# Gradle cache
+.gradle/
+
+# Android Studio / Java
+*.iml
+.gradle/
+local.properties
+
+# =========================================== #
+# Keep these folders, but ignore their contents
+# =========================================== #
+# To track empty folders, you can add .gitkeep inside them
+
+!Assets/
+!ProjectSettings/
+!Packages/
+!AutoBuild/
+!Scripts/
+!Scenes/
+
+# Ignore contents of folders, but not the folders themselves
+Assets/*~
+Assets/**/*.tmp
+Assets/**/*.bak
+Assets/**/*.orig
+Assets/**/*.swp
+
+# ============================ #
+# Optional: Git LFS (Large File Support)
+# ============================ #
+# For large binaries (models, audio, etc.)
+# Track file types with LFS if used:
+# *.psd filter=lfs diff=lfs merge=lfs -text
+# *.fbx filter=lfs diff=lfs merge=lfs -text
+# *.wav filter=lfs diff=lfs merge=lfs -text
