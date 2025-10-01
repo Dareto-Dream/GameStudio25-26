@@ -1,6 +1,6 @@
 # GameStudio (2025–2026)
 
-**Mid-Pacific Game Development Studio**
+**Mid-Pacific Game Development Studio**  
 Project Duration: 2025–2026
 
 ---
@@ -23,20 +23,24 @@ GameStudio is the internal development environment for Mid-Pacific's 2025–2026
 ## Repository Structure
 
 ```
+
 /Assets              # Unity assets: scenes, prefabs, scripts, etc.
+/Assets/Art          # Submodule: shared art assets
+/Assets/Audio        # Submodule: shared audio assets
 /Packages            # External and custom Unity packages
 /ProjectSettings     # Unity project settings (version, quality, etc.)
 /Builds              # Output builds (ignored in git)
 /Tools               # Editor and CLI tools for development
 /Docs                # Documentation and guidelines
-```
+
+````
 
 ---
 
 ## Requirements
 
 * Unity Editor: 2022.3 LTS (or as specified in `ProjectSettings`)
-* Git (with LFS, if applicable)
+* Git (with submodule support, and LFS if applicable)
 * Rider, Visual Studio, or VS Code
 * Platform SDKs (as needed per project: iOS, Android, WebGL, etc.)
 
@@ -44,18 +48,39 @@ GameStudio is the internal development environment for Mid-Pacific's 2025–2026
 
 ## Getting Started
 
-1. Clone the repository:
+1. Clone the repository **with submodules**:
 
    ```bash
-   git clone https://github.com/dareto-dream/gamestudio25-26.git
+   git clone --recursive https://github.com/dareto-dream/gamestudio25-26.git
    cd gamestudio25-26
-   ```
+````
+
+If you already cloned without `--recursive`, initialize submodules manually:
+
+```bash
+git submodule update --init --recursive
+```
 
 2. Open the project in Unity (ensure you're using the correct version).
 
 3. Restore any dependencies via Unity Package Manager.
 
 4. Build or run the game from the editor or using provided build tools.
+
+---
+
+## Submodules
+
+This project uses Git submodules for large or shared resources:
+
+* **Assets/Art** → External repository for 2D/3D art assets.
+* **Assets/Audio** (optional) → External repository for sound effects, music, or voice acting.
+
+To update submodules to their latest version:
+
+```bash
+git submodule update --remote --merge
+```
 
 ---
 
@@ -68,7 +93,7 @@ All contributions should follow the internal Mid-Pacific development guidelines:
 * Include documentation for new systems
 * Run all pre-commit tests and validations
 
-Please review the [CONTRIBUTING.md](./CONTRIBUTING.md) file for more details.
+Please review the [CONTRIBUTING.md](./Docs/CONTRIBUTING.md) file for detailed contribution policies and workflows.
 
 ---
 
@@ -83,5 +108,5 @@ Please review the [CONTRIBUTING.md](./CONTRIBUTING.md) file for more details.
 
 ## License
 
-This repository is proprietary and intended for use by Mid-Pacific development teams only.
+This project is licensed under the [Apache License 2.0](./LICENSE).
 © 2025–2026 Mid-Pacific Institute. All rights reserved.
