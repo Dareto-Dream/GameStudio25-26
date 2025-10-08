@@ -23,7 +23,6 @@ GameStudio is the internal development environment for Mid-Pacific's 2025–2026
 ## Repository Structure
 
 ```
-
 /Assets              # Unity assets: scenes, prefabs, scripts, etc.
 /Assets/Art          # Submodule: shared art assets
 /Assets/Audio        # Submodule: shared audio assets
@@ -32,8 +31,7 @@ GameStudio is the internal development environment for Mid-Pacific's 2025–2026
 /Builds              # Output builds (ignored in git)
 /Tools               # Editor and CLI tools for development
 /Docs                # Documentation and guidelines
-
-````
+```
 
 ---
 
@@ -48,24 +46,24 @@ GameStudio is the internal development environment for Mid-Pacific's 2025–2026
 
 ## Getting Started
 
-1. Clone the repository **with submodules**:
+1. Clone the repository with submodules:
 
    ```bash
    git clone --recursive https://github.com/dareto-dream/gamestudio25-26.git
    cd gamestudio25-26
-````
+   ```
 
-If you already cloned without `--recursive`, initialize submodules manually:
+   If you already cloned without `--recursive`, initialize submodules:
 
-```bash
-git submodule update --init --recursive
-```
+   ```bash
+   git submodule update --init --recursive
+   ```
 
 2. Open the project in Unity (ensure you're using the correct version).
 
-3. Restore any dependencies via Unity Package Manager.
+3. Restore any dependencies via the Unity Package Manager.
 
-4. Build or run the game from the editor or using provided build tools.
+4. Build or run the game from the editor or using the provided build tools.
 
 ---
 
@@ -76,7 +74,7 @@ This project uses Git submodules for large or shared resources:
 * **Assets/Art** → External repository for 2D/3D art assets.
 * **Assets/Audio** (optional) → External repository for sound effects, music, or voice acting.
 
-To update submodules to their latest version:
+To update submodules to their latest remote version:
 
 ```bash
 git submodule update --remote --merge
@@ -109,4 +107,5 @@ Please review the [CONTRIBUTING.md](./Docs/CONTRIBUTING.md) file for detailed co
 ## License
 
 This project is licensed under the [Apache License 2.0](./LICENSE).
+
 © 2025–2026 Mid-Pacific Institute. All rights reserved.
