@@ -3,8 +3,8 @@ using UnityEngine;
 public class UpgradeManager : MonoBehaviour
 {
     public static UpgradeManager Instance;
-    public float Money = 0.0f;
-    public float MoneyPerSecond = 1.0f;
+    public int Money = 0;
+    public int MoneyPerSecond = 1;
 
     private void Awake()
     {
@@ -22,27 +22,29 @@ public class UpgradeManager : MonoBehaviour
         Money += MoneyPerSecond; 
     }
 
-    public void exUpgradeMultiply(ref float multiplier)
+    public void exUpgradeMultiply(ref int multiplier)
     {
         MoneyPerSecond *= multiplier;
     }
 
-    public void exUpgradeAdd(ref float additive)
+    public void exUpgradeAdd(ref int additive)
     {
         MoneyPerSecond += additive;
     }
 
     public void UpgradeGeneral()
     {
-        MoneyPerSecond *= 1.5f;
+        MoneyPerSecond *= 2;
     }
 
     public float getMoney()
+    //Can you just write a comment for what this does? -Conner
     {
         return Money;
     }
 
     public float getMpS()
+        //Can you just write a comment for what this does? -Conner
     {
         return MoneyPerSecond;
     }
